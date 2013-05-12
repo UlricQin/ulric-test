@@ -1,0 +1,2 @@
+printf("Hello, this is include part\n");
+#include "inc.core"

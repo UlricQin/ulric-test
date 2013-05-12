@@ -1,0 +1,14 @@
+#! /bin/sh
+
+web=`/usr/bin/pgrep httpd`
+if [ "$web" != "" ]
+then
+    echo "The web service is running"
+else
+    echo "The web service is NOT running"
+    echo "Now, try to start the web service"
+    /etc/rc.d/init.d/httpd start
+    if [ $? -ne 0 ];then
+        echo "Start web service fail"
+    fi
+fi
