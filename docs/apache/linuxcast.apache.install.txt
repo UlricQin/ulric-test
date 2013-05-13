@@ -1,0 +1,38 @@
+apache安装
+CentOS 6.3 ( RHEL 6）YUM中集成的是apache 2.2.15(httpd 2.2.15)
+
+使用以下命令可以安装apache服务器：
+yum install -y httpd
+
+其他apache相关软件包：
+httpd-devel - 开发相关头文件
+httpd-tool - apache相关工具，如ab、htpasswd
+httpd-manual - apache官方文档
+
+安装之后可以使用以下命令启动、关闭apache服务器：
+service httpd start
+service httpd stop
+service httpd restart
+
+apache还提供了一些特殊的服务器指令：
+service httpd graceful 优雅重启，即完成了当前所有的用户请求之后再去重启
+service httpd graceful-stop 优雅关闭 
+
+把apache设置为开机自动启动：
+chkconfig httpd on
+
+/usr/local/apache2              - apache的默认安装位置
+/etc/httpd                      - apache的配置主目录
+/etc/httpd/conf/httpd.conf      - apache主配置文件
+/etc/httpd/conf.d               - apache模块配置文件
+/etc/httpd/modules              - apache模块文件路径链接
+
+apache默认网站根目录：
+/var/www/html
+
+apache相关用户：
+cat /etc/passwd | grep apache
+
+默认日志文件位置：
+/var/log/httpd
+

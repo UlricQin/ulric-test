@@ -1,0 +1,31 @@
+apt-get install xxxx 安装
+apt-get remove xxxx 卸载但不删除配置
+apt-get purge xxxx 卸载并且删除相关配置
+
+dpkg -i xxx.deb
+#################| --install xxx.deb 安装 deb 软件包
+dpkg -r xxx.deb
+#################| --remove xxx.deb 删除软件包
+dpkg -r -P xxx.deb
+#################| --purge xxx.deb 连同配置文件一起删除
+dpkg -I xxx.deb
+################# | -info xxx.deb 查看软件包信息
+dpkg -L xxx.deb 
+######################查看包内文件
+dpkg -l 
+################ 查看系统中已安装软件包信息
+dpkg-reconfigure xxx 
+#################### 重新配置软件包
+apt-get install xxx
+###################### 安装 xxx
+###########-d 仅下载
+############-f 强制安装
+apt-get remove xxx 
+###################卸载 xxx
+apt-get update 
+###############更新软件信息数据库
+apt-get upgrade 
+######################进行系统升级
+apt-cache search 
+##########################搜索软件包
+
